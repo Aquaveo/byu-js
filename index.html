@@ -2,12 +2,37 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.6.1/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.6.1/build/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
   </head>
   <body>
+    <!-- Map -->
     <div id="map" class="map"></div>
+
+    <!-- Plot Modal -->
+    <button type="button" id="plot-modal-btn" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#plot-modal">
+      Plot
+    </button>
+    <div class="modal" id="plot-modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Seine in Paris (Reach ID: 12040813)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="plot-wrapper">
+              <div id="plot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Plot Modal -->
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
